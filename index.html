@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light px-2 px-lg-4 py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5" href="#">My <span class="text-success ">Plants</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarSupportedContent">
+                <ul class="navbar-nav d-lg-flex gap-lg-4 mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link text-black" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#"> Plants </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#"> Delivery </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#"> Help </a>
+                    </li>
+                </ul>
+                <div class="d-lg-flex gap-lg-5">
+                    <form class="mb-4 mb-lg-0">
+                        <input class="search-bar form-control me-2 rounded-pill" type="search"
+                            placeholder="Search Products..." aria-label="Search">
+                        <img class="search-icon" src="./images/navbar/search.svg" alt="Search icon">
+                    </form>
+                    <div class="d-flex gap-5">
+                        <img src="./images/navbar/add-user.svg" alt="Add User">
+                        <img src="./images/navbar/bag.svg" alt="Bag">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container plant-collection">
+        <h2 class="heading-plant-collection my-5 text-center">Plant Collection</h2>
+        <div class="plant-collection d-flex flex-column flex-md-row gap-4">
+            <div class="plant-collection-images d-flex gap-4"></div>
+            <div class="prev-next-buttons d-flex justify-content-center gap-2 flex-md-column-reverse">
+                <img class="prev-button" role="button" src="./images/plant-collection/arrow-previous.svg"
+                    alt="Arrow Next">
+                <img class="next-button" role="button" src="./images/plant-collection/arrow-next.svg"
+                    alt="Arrow Previous">
+            </div>
+        </div>
+    </section>
+
+    <section class="our-journey container-fluid px-5 row justify-content-lg-around gap-2 position-relative">
+        <div class="our-journey-image-container position-relative col-10 col-lg-4 mx-auto">
+            <img class="position-absolute " src="./images/our-journey/main-plant.png" alt="main plant image">
+        </div>
+        <div
+            class="our-journey-content col-12 col-sm-10 mx-auto col-lg-5 d-flex flex-column justify-content-center gap-4">
+            <h2 class="heading-our-journey">Our Journey</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when It
+                is a long .It is a long established fact that a reader will be distracted by the readable content of a
+                is simply.</p>
+            <button role="button" class="button-our-journey">Get Start</button>
+        </div>
+        <img src="./images/our-journey/plant-two.png" alt="Absolute Image two"
+            class="absolute-image-one position-absolute ">
+        <img src="./images/our-journey/leaf-small.svg" alt="Leaf Image One"
+            class="absolute-image-leaf-one position-absolute ">
+        <img src="./images/our-journey/leaf-small.svg" alt="Leaf Image Two"
+            class="absolute-image-leaf-two position-absolute ">
+    </section>
+
+    <section class="our-advantages container-fluid px-4 px-md-5 mt-5 position-relative">
+        <h2 class="heading-our-advantages">Our Advantages</h2>
+        <div class="advantages-cards row">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 p-4">
+                <div class="advantage-card position-relative">
+                    <div class="p-4 px-5 rounded-1 ">
+                        <p>Easy Order</p>
+                        <p>It is a long established fact that a reader will be.</p>
+                    </div>
+                    <img class="position-absolute" src="./images/our-advantages/easy-order.svg" alt="Easy Order">
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 p-4">
+                <div class="advantage-card position-relative">
+                    <div class="p-4 px-5 rounded-1 ">
+                        <p>Fast Delivery</p>
+                        <p>It is a long established fact that a reader will be.</p>
+                    </div>
+                    <img class="position-absolute" src="./images/our-advantages/fast-delivery.svg" alt="Easy Order">
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 p-4">
+                <div class="advantage-card position-relative">
+                    <div class="p-4 px-5 rounded-1 ">
+                        <p>Easy Order</p>
+                        <p>It is a long established fact that a reader will be.</p>
+                    </div>
+                    <img class="position-absolute" src="./images/our-advantages/easy-order-two.svg" alt="Easy Order">
+                </div>
+            </div>
+        </div>
+        <img class="advantage-absolute-leaf-one position-absolute" src="./images/our-advantages/leaf-small.svg"
+            alt="Leaf Small">
+        <img class="advantage-absolute-leaf-two position-absolute" src="./images/our-advantages/leaf-small.svg"
+            alt="Leaf Small">
+        <img class="advantage-absolute-leaf-three position-absolute" src="./images/our-advantages/leaf-small.svg"
+            alt="Leaf Small">
+    </section>
+
+    <section class="ask-anything d-flex flex-column flex-lg-row align-items-center mt-5">
+        <div class="ask-anything-image">
+            <img src="./images/ask-anything/ask-anything-image.png" alt="Ask Anything Image">
+        </div>
+        <form class="ask-anything-form p-5">
+            <h2 class="heading-ask-anything mb-4"> Ask Us Anything</h2>
+            <div>
+                <input class="w-100 my-2" type="text" placeholder="Name">
+                <input class="w-100 my-2" type="tel" placeholder="Phone">
+                <input class="w-100 my-2" type="email" placeholder="Email">
+                <textarea class="w-100 my-2 mt-5" rows="1" placeholder="Message"></textarea>
+                <div class="d-flex justify-content-between my-5">
+                    <button class="button-ask-anything">Send</button>
+                    <div class="d-flex gap-5">
+                        <img role="button" src="./images/ask-anything/facebook.svg" alt="Facebook">
+                        <img role="button" src="./images/ask-anything/instagram.svg" alt="instagram">
+                        <img role="button" src="./images/ask-anything/pinterest.svg" alt="pinterest">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+    <section class="chooser-section container mt-5">
+        <h2 class="heading-chooser-section text-center ">Choosing the right plant</h2>
+        <div class="chooser-cards row">
+            <div class="chooser-card col-12 col-lg-4 p-3">
+                <div class="p-4 d-flex flex-column flex-sm-row flex-lg-column gap-3">
+                    <div class="image-container d-flex justify-content-center align-items-center">
+                        <img src="./images/chooser/garden-plant.svg" alt="Garden Plant">
+                        <img src="./images/chooser/garden-plant-hover.svg" alt="Garden Plant">
+                    </div>
+                    <div>
+                        <p class="heading-chooser-plants">Garden Plants</p>
+                        <p class="chooser-plant-text-content">It is a long established fact that a reader will be
+                            distracted by the </p>
+                    </div>
+                </div>
+            </div>
+            <div class="chooser-card col-12 col-lg-4 p-3">
+                <div class="p-4 d-flex flex-column flex-sm-row flex-lg-column gap-3">
+                    <div class="image-container d-flex justify-content-center align-items-center">
+                        <img src="./images/chooser/indoor-plant.svg" alt="Indoor Plant">
+                        <img src="./images/chooser/indoor-plant-hover.svg" alt="Indoor Plant">
+                    </div>
+                    <div>
+                        <p class="heading-chooser-plants">Indoor Plants</p>
+                        <p class="chooser-plant-text-content">It is a long established fact that a reader will be
+                            distracted by the </p>
+                    </div>
+                </div>
+            </div>
+            <div class="chooser-card col-12 col-lg-4 p-3">
+                <div class="p-4 d-flex flex-column flex-sm-row flex-lg-column gap-3">
+                    <div class="image-container d-flex justify-content-center align-items-center">
+                        <img src="./images/chooser/home-plant.svg" alt="Home Plant">
+                        <img src="./images/chooser/home-plant-hover.svg" alt="Home Plant">
+                    </div>
+                    <div>
+                        <p class="heading-chooser-plants">Home Plants Plants</p>
+                        <p class="chooser-plant-text-content">It is a long established fact that a reader will be
+                            distracted by the </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="plant-care container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center gap-4">
+        <div class="plant-care-content position-relative p-2 p-md-5 d-flex flex-column gap-5">
+            <h2 class="heading-plant-care">Plant care </h2>
+            <p class="text-content-plant-care">It is a long established fact that a reader will be distracted by the
+                readable content of a page when It is a long .It is a long established fact that a reader will be
+                distracted by the readable content of a is simply.
+                a page when It is a long .It is a long established fact that a reader will be distracted by the
+                readable
+                content of a is simply.
+            </p>
+            <button role="button" class="button-read-blog">Read The Blog</button>
+            <img src="./images/plant-care/leaves.svg" alt="Leaves small" class="leaves-plant-care position-absolute ">
+        </div>
+        <div class="plant-care-image">
+            <img src="./images/plant-care/plant-care-video.png" alt="Plant care Image">
+        </div>
+    </section>
+
+    <section class="footer-section container-fluid d-flex flex-column flex-lg-row">
+        <div class="nuvosa">
+            <h1>nuvosa</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when It
+                is a long .It is a long established fact that a reader will be distracted by the.</p>
+            <div class="social-media-logos">
+                <img src="./images/footer/instagram.svg" alt="Instagram">
+                <img src="./images/footer/facebook.svg" alt="Facebook">
+                <img src="./images/footer/youtube.svg" alt="Youtube">
+                <img src="./images/footer/twitter.svg" alt="Twitter">
+            </div>
+        </div>
+        <div class="service-support-company d-flex">
+            <div class="service d-flex flex-column ">
+                <h3>Service</h3>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+            </div>
+            <div class="support d-flex flex-column ">
+                <h3>Support</h3>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+            </div>
+            <div class="company d-flex flex-column ">
+                <h3>Company</h3>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+                <a href="#">Gardening</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
