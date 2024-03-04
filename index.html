@@ -52,6 +52,27 @@
         </div>
     </nav>
 
+    <section class="hero-section container-fluid ps-5 pt-5 d-flex flex-column flex-lg-row p-0">
+        <div class="hero-content d-flex flex-column gap-5">
+            <div class="d-flex align-items-center gap-2">
+                <hr>
+                <p>Love Nature</p>
+            </div>
+            <h1>Take a new friend to your home</h1>
+            <div class="hero-buttons d-flex gap-4">
+                <button class="button-plant-care text-nowrap" role="button">Plant care</button>
+                <button class="button-buy-plant text-nowrap" role="button">Buy a Plant</button>
+            </div>
+            <div class="hero-social-media-logos d-flex gap-4">
+                <img src="./images/ask-anything/facebook.svg" alt="Facebook">
+                <img src="./images/ask-anything/instagram.svg" alt="Instagram">
+                <img src="./images/ask-anything/pinterest.svg" alt="Pinterest">
+            </div>
+        </div>
+
+        <div class="hero-slider d-flex overflow-hidden"></div>
+    </section>
+
     <section class="container plant-collection">
         <h2 class="heading-plant-collection my-5 text-center">Plant Collection</h2>
         <div class="plant-collection d-flex flex-column flex-md-row gap-4">
@@ -65,7 +86,7 @@
         </div>
     </section>
 
-    <section class="our-journey container-fluid px-5 row justify-content-lg-around gap-2 position-relative">
+    <section class="our-journey container-fluid px-5 row justify-content-lg-around gap-2 position-relative p-0">
         <div class="our-journey-image-container position-relative col-10 col-lg-4 mx-auto">
             <img class="position-absolute " src="./images/our-journey/main-plant.png" alt="main plant image">
         </div>
@@ -193,8 +214,33 @@
         </div>
     </section>
 
+    <section class="client-section mt-5">
+        <h2 class="heading-client px-5 my-5">What clients say about us</h2>
+        <div class="client-carousel d-flex gap-5 overflow-scroll">
+            <div class="client-card d-flex gap-5 flex-shrink-0 p-5 bg-success rounded-3">
+                <div class="image-container"><img src="./images/client-section/client.png" alt="Client one"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus nesciunt explicabo quasi nam sint
+                    deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit mollitia!
+                    Maiores, officia?</p>
+            </div>
+            <div class="client-card d-flex gap-5 flex-shrink-0 p-5 bg-success rounded-3">
+                <div class="image-container"><img src="./images/client-section/client.png" alt="Client one"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus nesciunt explicabo quasi nam sint
+                    deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit mollitia!
+                    Maiores, officia?</p>
+            </div>
+            <div class="client-card d-flex gap-5 flex-shrink-0 p-5 bg-success rounded-3">
+                <div class="image-container"><img src="./images/client-section/client.png" alt="Client one"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus nesciunt explicabo quasi nam sint
+                    deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit mollitia!
+                    Maiores, officia?</p>
+            </div>
+
+        </div>
+    </section>
+
     <section
-        class="plant-care container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center gap-4">
+        class="plant-care container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center gap-4 p-0 mt-5">
         <div class="plant-care-content position-relative p-2 p-md-5 d-flex flex-column gap-5">
             <h2 class="heading-plant-care">Plant care </h2>
             <p class="text-content-plant-care">It is a long established fact that a reader will be distracted by the
@@ -212,42 +258,54 @@
         </div>
     </section>
 
-    <section class="footer-section container-fluid d-flex flex-column flex-lg-row">
-        <div class="nuvosa">
-            <h1>nuvosa</h1>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when It
-                is a long .It is a long established fact that a reader will be distracted by the.</p>
-            <div class="social-media-logos">
-                <img src="./images/footer/instagram.svg" alt="Instagram">
-                <img src="./images/footer/facebook.svg" alt="Facebook">
-                <img src="./images/footer/youtube.svg" alt="Youtube">
-                <img src="./images/footer/twitter.svg" alt="Twitter">
+    <section class="footer-section container-fluid px-0 py-5 d-flex flex-column gap-3 mt-5 overflow-hidden">
+        <div class="footer-content row">
+            <div class="nuvosa col-12 col-lg-6 d-flex flex-column gap-3">
+                <h2>nuvosa</h2>
+                <p>It is a long established fact that a reader will be
+                    distracted by the readable content of a page when It
+                    is a long. It is a long established fact that a reader will be distracted by the.</p>
+                <div class="social-media-logos">
+                    <img src="./images/footer/instagram.svg" alt="Instagram">
+                    <img src="./images/footer/facebook.svg" alt="Facebook">
+                    <img src="./images/footer/youtube.svg" alt="Youtube">
+                    <img src="./images/footer/twitter.svg" alt="Twitter">
+                </div>
+            </div>
+            <div class="service-support-company col-12 col-lg-6 row mt-4">
+                <div class="service col-4 d-flex flex-column align-items-center">
+                    <h3>Service</h3>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                </div>
+                <div class="support col-4 d-flex flex-column align-items-center">
+                    <h3>Support</h3>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                </div>
+                <div class="company col-4 d-flex flex-column align-items-center">
+                    <h3>Company</h3>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                    <a href="#">Gardening</a>
+                </div>
             </div>
         </div>
-        <div class="service-support-company d-flex">
-            <div class="service d-flex flex-column ">
-                <h3>Service</h3>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-            </div>
-            <div class="support d-flex flex-column ">
-                <h3>Support</h3>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-            </div>
-            <div class="company d-flex flex-column ">
-                <h3>Company</h3>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
-                <a href="#">Gardening</a>
+        <hr>
+        <div class="copyright-section d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+            <p>Copyright &copy; 2023 Nuvosa, All Right Reserved.</p>
+            <div class="d-flex gap-3 align-items-center">
+                <a href="#">Terms of Use</a>
+                <a href="#">Copyright & Trademark</a>
+                <a href="#">Policy</a>
             </div>
         </div>
     </section>

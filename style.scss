@@ -3,9 +3,9 @@ $dark-green-color: #09270D;
 $grey-text-color: #727272;
 
 *{
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @mixin button-style($name, $fs, $fw, $bg-color, $color){
@@ -15,7 +15,7 @@ $grey-text-color: #727272;
         font-size: $fs;
         font-weight: $fw;
         border-radius: 1.5rem;
-        padding: 0.6rem 1.5rem !important;
+        padding: 0.3rem 1.5rem !important;
         border: 0;
     }
 }
@@ -37,6 +37,37 @@ $grey-text-color: #727272;
             height: 1.2rem;
             right: 0.8rem;
             top: 0.6rem;
+        }
+    }
+}
+
+// Hero Section
+.hero-section {
+    .hero-content {
+        width: 16rem;
+        hr {
+            width: 2rem;
+            height: 0.1rem;
+        }
+        @include button-style("plant-care", 1.2rem, 600,  white, $dark-green-color);
+        @include button-style("buy-plant", 1.2rem, 600,  $dark-green-color, white);
+        .button-plant-care {
+            border: 2px solid $dark-green-color;
+        }
+        .button-buy-plant {
+            z-index: 2;
+        }
+    }
+    .hero-slider {
+        .home-card {
+            height: 85%;
+            width: calc(100% - 16rem);
+            flex-shrink: 0;
+            img {
+                height: 100%;
+                width: 100%;
+                z-index: 0;
+            }
         }
     }
 }
@@ -204,6 +235,22 @@ $grey-text-color: #727272;
     }
 }
 
+// Client Section
+.client-section {
+    .client-carousel {
+        .client-card {
+            width: 50%;
+            .image-container {
+                height: 6rem;
+                width: 6rem;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
 //Take Care Section
 .plant-care {
     .plant-care-content{
@@ -250,3 +297,67 @@ $grey-text-color: #727272;
 
 
 //Footer Section
+.footer-section {
+    background-color: $dark-green-color;
+    .footer-content, .copyright-section {
+        padding: 0 2rem;
+    }
+    .footer-content {
+        h2 {
+            font-size: 4rem;
+            color: white;
+        }
+        p{
+            font-size: 1.2rem;
+            color: white;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 1.3rem;
+        }
+        a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: white;
+        }
+    }
+    .copyright-section {
+        p {
+            font-size: 0.7rem;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            font-size: 0.7rem;
+            color: white;
+        }
+    }
+}
+
+@media (min-width: 992px){
+    .footer-section {
+        .footer-content, .copyright-section {
+            padding: 0 10rem;
+        }
+        .footer-content {
+            a {
+                text-decoration: none;
+                font-size: 1rem;
+                color: white;
+            }
+        }
+        .copyright-section {
+            p, a {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .footer-section {
+        .footer-content, .copyright-section {
+            padding: 0 15rem;
+        }
+    }
+}
