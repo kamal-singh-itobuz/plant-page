@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light px-2 px-lg-4 py-4">
         <div class="container-fluid">
-            <a class="navbar-brand me-5" href="#">My <span class="text-success ">Plants</span></a>
+            <a class="heading-navbar navbar-brand me-5" href="#">My <span class="text-success ">Plants</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,19 +22,19 @@
             <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarSupportedContent">
                 <ul class="navbar-nav d-lg-flex gap-lg-4 mb-2 mb-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link text-black" href="#">About</a>
+                        <a class="nav-link text-dark " href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#">Shop</a>
+                        <a class="nav-link text-dark" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#"> Plants </a>
+                        <a class="nav-link text-dark" href="#"> Plants </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#"> Delivery </a>
+                        <a class="nav-link text-dark" href="#"> Delivery </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#"> Help </a>
+                        <a class="nav-link text-dark" href="#"> Help </a>
                     </li>
                 </ul>
                 <div class="d-lg-flex gap-lg-5">
@@ -67,18 +67,20 @@
             </div>
             <div class="hero-slider d-flex overflow-hidden align-items-center"></div>
         </div>
-        <div class="social-and-prev-next-buttons d-flex justify-content-between">
-            <div class="hero-social-media-logos d-flex gap-4">
-                <img role="button" src="./images/ask-anything/facebook.svg" alt="Facebook">
-                <img role="button" src="./images/ask-anything/instagram.svg" alt="Instagram">
-                <img role="button" src="./images/ask-anything/pinterest.svg" alt="Pinterest">
+        <div class="social-and-prev-next-buttons d-flex justify-content-between align-items-center ">
+            <div class="hero-social-media-logos d-flex gap-1 gap-sm-4">
+                <img role="button" class="p-0" src="./images/ask-anything/facebook.svg" alt="Facebook">
+                <img role="button" class="p-0" src="./images/ask-anything/instagram.svg" alt="Instagram">
+                <img role="button" class="p-0" src="./images/ask-anything/pinterest.svg" alt="Pinterest">
             </div>
-            <div class="hero-next-prev-buttons">
+            <div class="hero-next-prev-buttons d-flex">
                 <img role="button" class="hero-left-slider-button" src="./images/home/left-arrow.svg" alt="Prev">
-                <div class="range-sliding">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="range-sliding d-flex align-items-center ">
+                    <span>1</span>
+                    <span role="button" class="range-sliding-span ms-2 "></span>
+                    <span role="button" class="range-sliding-span"></span>
+                    <span role="button" class="range-sliding-span me-2"></span>
+                    <span>3</span>
                 </div>
                 <img role="button" class="hero-right-slider-button" src="./images/home/right-arrow.svg" alt="next">
             </div>
@@ -90,10 +92,6 @@
         <div class="plant-collection d-flex flex-column flex-md-row gap-4">
             <div class="plant-collection-images d-flex gap-4"></div>
             <div class="prev-next-buttons d-flex justify-content-center gap-2 flex-md-column-reverse">
-                <!-- <img class="prev-button" role="button" src="./images/plant-collection/arrow-previous.svg"
-                    alt="Arrow Next">
-                <img class="next-button" role="button" src="./images/plant-collection/arrow-next.svg"
-                    alt="Arrow Previous"> -->
                 <div class="prev-button d-flex justify-content-center align-items-center" role="button">
                     < </div>
                         <div class="next-button d-flex justify-content-center align-items-center" role="button"> >
@@ -126,7 +124,7 @@
             <div class="col-12 col-sm-10 col-md-8 col-lg-4 p-4">
                 <div class="advantage-card position-relative">
                     <div class="p-4 px-5 rounded-1 ">
-                        <p>Easy Order</p>
+                        <p class="advantage-card-heading">Easy Order</p>
                         <p>It is a long established fact that a reader will be.</p>
                     </div>
                     <img class="position-absolute" src="./images/our-advantages/easy-order.svg" alt="Easy Order">
@@ -135,7 +133,7 @@
             <div class="col-12 col-sm-10 col-md-8 col-lg-4 p-4">
                 <div class="advantage-card position-relative">
                     <div class="p-4 px-5 rounded-1 ">
-                        <p>Fast Delivery</p>
+                        <p class="advantage-card-heading">Fast Delivery</p>
                         <p>It is a long established fact that a reader will be.</p>
                     </div>
                     <img class="position-absolute" src="./images/our-advantages/fast-delivery.svg" alt="Easy Order">
@@ -144,7 +142,7 @@
             <div class="col-12 col-sm-10 col-md-8 col-lg-4 p-4">
                 <div class="advantage-card position-relative">
                     <div class="p-4 px-5 rounded-1 ">
-                        <p>Easy Order</p>
+                        <p class="advantage-card-heading">Easy Order</p>
                         <p>It is a long established fact that a reader will be.</p>
                     </div>
                     <img class="position-absolute" src="./images/our-advantages/easy-order-two.svg" alt="Easy Order">

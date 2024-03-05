@@ -3,23 +3,24 @@ $light-green-color: #3E8847;
 $dark-green-color: #09270D;
 $grey-text-color: #727272;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@mixin button-style($name, $fs, $fw, $bg-color, $color){
+@mixin button-style($name, $fs, $fw, $bg-color, $color) {
     .button-#{$name} {
         background-color: $bg-color;
         color: $color;
         font-size: $fs;
         font-weight: $fw;
         border-radius: 1.5rem;
-        padding: 0.3rem 1.5rem !important;
-        border: 0;
+        padding: 0.5rem 1.5rem !important;
+        border: 2px solid $dark-green-color;
     }
 }
+
 @mixin heading-style($name, $fs, $fw, $color) {
     .heading-#{$name} {
         color: $color;
@@ -30,10 +31,12 @@ $grey-text-color: #727272;
 }
 
 .navbar {
-    background-color: pink;
+    @include heading-style("navbar", 2.4rem, 700, $grey-text-color);
+
     form {
         position: relative;
         max-width: 15rem;
+
         .search-icon {
             position: absolute;
             height: 1.2rem;
@@ -41,36 +44,79 @@ $grey-text-color: #727272;
             top: 0.6rem;
         }
     }
+
+    .nav-link {
+        padding: 0;
+        border-bottom: 0.15rem solid transparent;
+        transition: linear 0.3s;
+    }
+
+    .nav-link:hover {
+        border-bottom: 0.15rem solid purple;
+    }
 }
 
 // Hero Section
 .hero-section {
     .hero-content {
         width: 16rem;
+
         hr {
             width: 2rem;
             height: 0.1rem;
         }
+
         @include heading-style("hero-section", 3rem, 600, $light-green-color);
-        @include button-style("plant-care", 1.2rem, 600,  white, $dark-green-color);
-        @include button-style("buy-plant", 1.2rem, 600,  $dark-green-color, white);
+        @include button-style("plant-care", 1.2rem, 600, white, $dark-green-color);
+        @include button-style("buy-plant", 1.2rem, 600, $dark-green-color, white);
+
         .button-plant-care {
             border: 2px solid $dark-green-color;
+            transition: all 0.5s ease;
+
+            &:hover {
+                color: white;
+                background-color: $dark-green-color;
+            }
         }
+
         .button-buy-plant {
             z-index: 3;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: white;
+                color: $dark-green-color;
+            }
         }
     }
+
+    .hero-social-media-logos {
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
     .hero-next-prev-buttons {
         img {
-            width: 3.5rem;
+            width: 3rem;
+        }
+
+        .range-sliding-span {
+            display: inline-block;
+            width: 1.5rem;
+            height: 0.2rem;
+            background-color: green;
         }
     }
+
     .hero-slider {
         .home-card {
             transition: all .6s ease;
             width: 100%;
             flex-shrink: 0;
+
             img {
                 height: 100%;
                 width: 100%;
@@ -84,6 +130,7 @@ $grey-text-color: #727272;
         .hero-slider {
             .home-card {
                 width: 100%;
+
                 img {
                     height: 80%;
                 }
@@ -91,17 +138,20 @@ $grey-text-color: #727272;
         }
     }
 }
+
 @media (min-width: 768px) {
     .hero-section {
         .hero-slider {
             .home-card {
                 margin-right: -40px;
                 width: 80%;
+
                 img {
                     height: 100%;
                 }
             }
         }
+
         .social-and-prev-next-buttons {
             width: 75%;
         }
@@ -119,40 +169,50 @@ $grey-text-color: #727272;
 }
 
 //Plant Collection
-.plant-collection{
+.plant-collection {
     @include heading-style("plant-collection", 2rem, 600, $dark-green-color);
+
     .plant-collection-images {
         overflow: hidden;
-        .plant-collection-card{
+
+        .plant-collection-card {
             transition: all 0.8s ease;
             height: 28rem;
             width: 24rem;
             flex-shrink: 0;
+
             img {
                 height: 90%;
                 width: 100%;
                 transition: transform 0.6s ease;
+
                 &:hover {
                     transform: rotate(-5deg);
                 }
             }
-            p{
+
+            p {
                 margin-top: 1rem;
             }
         }
     }
+
     .prev-next-buttons {
-        .prev-button, .next-button {
+
+        .prev-button,
+        .next-button {
             height: 3rem;
             width: 3rem;
             border-radius: 50%;
             border: 1.5px solid black;
             transition: all 0.3s ease;
         }
+
         .prev-button:hover {
             color: #F5C771;
             border: 1.5px solid #F5C771;
         }
+
         .next-button:hover {
             color: $dark-green-color;
             border: 1.5px solid $dark-green-color;
@@ -161,13 +221,15 @@ $grey-text-color: #727272;
 }
 
 //Our Journey
-.our-journey{
+.our-journey {
     margin-top: 15rem !important;
+
     .our-journey-image-container {
         width: 25rem;
         aspect-ratio: 3/4;
         background-color: green;
         border-radius: 50% 50% 0 0;
+
         img {
             width: 90%;
             bottom: 0;
@@ -175,29 +237,42 @@ $grey-text-color: #727272;
             transform: translateX(-50%);
         }
     }
+
     .our-journey-content {
         @include heading-style("our-journey", 2rem, 600, $dark-green-color);
-        .button-our-journey{
-            max-width: 10rem;
+
+        .button-our-journey {
+            max-width: 9rem;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: white;
+                color: $dark-green-color;
+            }
         }
-        @include button-style("our-journey", 1.2rem, 600,  $dark-green-color, white)
+
+        @include button-style("our-journey", 1.2rem, 600, $dark-green-color, white)
     }
+
     .absolute-image-one {
         width: 8rem;
         right: 0;
         top: -15rem;
     }
+
     .absolute-image-leaf-one {
         width: 5rem;
         left: 2rem;
         top: -12rem;
     }
+
     .absolute-image-leaf-two {
         width: 5rem;
         left: -2.5rem;
         top: -9rem;
     }
 }
+
 @media(min-width: 768px) {
     .our-journey {
         .absolute-image-one {
@@ -209,28 +284,39 @@ $grey-text-color: #727272;
 // Our Advantages
 .our-advantages {
     @include heading-style("our-advantages", 2rem, 600, $dark-green-color);
-    .advantage-card{
+
+    .advantage-card {
         >div {
             background-color: #FAF9F7;
         }
+
         >img {
-            left: -0.8rem;
-            width: 3rem;
+            left: -1.7rem;
+            width: 4rem;
             top: 50%;
             transform: translateY(-50%);
         }
+
+        .advantage-card-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
     }
+
     >img {
         width: 4rem;
     }
+
     .advantage-absolute-leaf-one {
         right: 0;
         top: 0;
     }
+
     .advantage-absolute-leaf-two {
         right: 4rem;
         top: 3rem;
     }
+
     .advantage-absolute-leaf-three {
         right: 20rem;
         top: -3rem;
@@ -242,41 +328,59 @@ $grey-text-color: #727272;
     .ask-anything-image {
         height: 100%;
         padding: 1rem;
+
         >img {
             height: 100%;
             width: 100%;
         }
     }
-    .ask-anything-form{
+
+    .ask-anything-form {
         border-radius: 1.5rem 0 0 1.5rem;
         padding: 2rem;
         margin-left: -5%;
         height: 90%;
         background-color: #FAF9F7;
         @include heading-style("ask-anything", 2rem, 600, $dark-green-color);
-        input, textarea{
+
+        input,
+        textarea {
             outline: none;
             padding-bottom: 0.5rem;
             border: none;
             border-bottom: 1px solid grey;
             background-color: #FAF9F7;
         }
+
+        .button-ask-anything {
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: white;
+                color: $dark-green-color;
+            }
+        }
     }
+
     @include button-style("ask-anything", 1.1rem, 600, $dark-green-color, white)
 }
+
 @media (min-width: 576px) {
     .ask-anything {
         .ask-anything-image {
             padding: 3rem;
         }
-        .ask-anything-form{
+
+        .ask-anything-form {
             padding: 5rem;
         }
     }
 }
+
 @media (min-width: 992px) {
     .ask-anything {
         height: 80vh;
+
         .ask-anything-image {
             padding: 0;
         }
@@ -286,43 +390,55 @@ $grey-text-color: #727272;
 //chooser section
 .chooser-section {
     @include heading-style("chooser-section", 2rem, 600, $dark-green-color);
-    .chooser-cards{
+
+    .chooser-cards {
         .chooser-card {
-            >div{
+            >div {
                 transition: all 0.5s ease;
                 @include heading-style("chooser-plants", 1.5rem, 500, $dark-green-color);
+
                 .image-container {
                     width: 6rem;
                     height: 6rem;
                     border-radius: 50%;
                     background-color: $light-green-color;
+
                     img {
                         width: 3.5rem;
                         height: 3.5rem;
                     }
+
                     img:first-child {
                         display: block;
                     }
+
                     img:last-child {
                         display: none;
                     }
                 }
-                .chooser-plant-text-content{
+
+                .chooser-plant-text-content {
                     color: $grey-text-color;
                 }
+
                 &:hover {
                     background-color: #3E8847;
-                    .image-container{
+
+                    .image-container {
                         background-color: white;
+
                         img:first-child {
                             display: none;
                         }
+
                         img:last-child {
                             display: block;
                         }
                     }
+
                     @include heading-style("chooser-plants", 1.5rem, 500, white);
-                    .chooser-plant-text-content{
+
+                    .chooser-plant-text-content {
                         color: white;
                     }
                 }
@@ -334,21 +450,27 @@ $grey-text-color: #727272;
 // Client Section
 .client-section {
     @include heading-style("client-section", 2rem, 600, $dark-green-color);
+
     .client-carousel {
         .client-card {
             transition: all 0.5s ease;
-            >div{
+
+            >div {
                 border-radius: 1rem;
             }
+
             width: 100%;
+
             .client-image {
                 height: 6rem;
                 width: 6rem;
             }
+
             .client-upper-comma {
                 left: 0rem;
                 top: 2rem;
             }
+
             .client-bottom-comma {
                 right: 0rem;
                 bottom: -2rem;
@@ -356,21 +478,25 @@ $grey-text-color: #727272;
         }
     }
 }
+
 @media (min-width: 576px) {
     .client-section {
         .client-carousel {
             .client-card {
                 width: 75%;
+
                 .client-image {
                     height: 6rem;
                     width: 6rem;
                     margin-left: -6rem;
                     margin-right: 3rem;
                 }
+
                 .client-upper-comma {
                     left: 3rem;
                     top: -4rem;
                 }
+
                 .client-bottom-comma {
                     right: 0rem;
                     bottom: -3rem;
@@ -379,11 +505,13 @@ $grey-text-color: #727272;
         }
     }
 }
+
 @media (min-width: 992px) {
     .client-section {
         .client-carousel {
             .client-card {
                 width: 60%;
+
                 .client-image {
                     height: 6rem;
                     width: 6rem;
@@ -394,44 +522,61 @@ $grey-text-color: #727272;
 }
 
 
-//Take Care Section
+//Plant Care Section
 .plant-care {
-    .plant-care-content{
+    .plant-care-content {
         width: 80%;
+
         img {
             width: 5rem;
             bottom: -2rem;
             right: 12rem;
         }
+
         @include heading-style("plant-care", 2rem, 500, $dark-green-color);
-        .text-content-plant-care{
+
+        .text-content-plant-care {
             font-size: 1.1rem;
             color: $grey-text-color;
         }
+
         .leaves-plant-care {
             display: none;
         }
+
         .button-read-blog {
-            max-width: 15rem;
+            max-width: 12rem;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: white;
+                color: $dark-green-color;
+            }
         }
+
         @include button-style("read-blog", 1.2rem, 600, $dark-green-color, white);
     }
+
     .plant-care-image {
         width: 80%;
+
         img {
             width: 100%;
             height: 100%;
         }
     }
 }
+
 @media(min-width: 992px) {
     .plant-care {
         .plant-care-content {
             width: 50%;
+
             .leaves-plant-care {
                 display: block;
             }
         }
+
         .plant-care-image {
             width: 50%;
         }
@@ -442,64 +587,92 @@ $grey-text-color: #727272;
 //Footer Section
 .footer-section {
     background-color: $dark-green-color;
-    .footer-content, .copyright-section {
+
+    hr {
+        color: $grey-text-color;
+    }
+
+    .footer-content,
+    .copyright-section {
         padding: 0 2rem;
     }
+
     .footer-content {
         h2 {
             font-size: 4rem;
             color: white;
         }
-        p{
+
+        p {
             font-size: 1.2rem;
-            color: white;
+            color: $grey-text-color;
         }
+
         h3 {
             font-size: 1.3rem;
             color: white;
             margin-bottom: 1.3rem;
         }
+
         a {
             text-decoration: none;
             font-size: 0.8rem;
-            color: white;
+            color: $grey-text-color;
+
+            &:hover {
+                color: #d8d8d8;
+            }
         }
     }
+
     .copyright-section {
         p {
             font-size: 0.7rem;
-            color: white;
+            color: $grey-text-color;
         }
-        a{
+
+        a {
             text-decoration: none;
             font-size: 0.7rem;
-            color: white;
+            color: $grey-text-color;
+
+            &:hover {
+                color: #d8d8d8;
+            }
         }
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
     .footer-section {
-        .footer-content, .copyright-section {
+
+        .footer-content,
+        .copyright-section {
             padding: 0 10rem;
         }
+
         .footer-content {
             a {
                 text-decoration: none;
                 font-size: 1rem;
-                color: white;
             }
         }
+
         .copyright-section {
-            p, a {
+
+            p,
+            a {
                 font-size: 0.9rem;
             }
         }
     }
 }
+
 @media (min-width: 1200px) {
     .footer-section {
-        .footer-content, .copyright-section {
+
+        .footer-content,
+        .copyright-section {
             padding: 0 15rem;
         }
     }
