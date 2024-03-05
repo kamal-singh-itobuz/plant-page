@@ -55,18 +55,61 @@ $grey-text-color: #727272;
             border: 2px solid $dark-green-color;
         }
         .button-buy-plant {
-            z-index: 2;
+            z-index: 3;
+        }
+    }
+    .hero-next-prev-buttons {
+        img {
+            width: 3.5rem;
         }
     }
     .hero-slider {
         .home-card {
-            height: 85%;
-            width: calc(100% - 16rem);
+            transition: all .6s ease;
+            width: 100%;
             flex-shrink: 0;
             img {
                 height: 100%;
                 width: 100%;
-                z-index: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .hero-section {
+        .hero-slider {
+            .home-card {
+                width: 100%;
+                img {
+                    height: 80%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .hero-section {
+        .hero-slider {
+            .home-card {
+                margin-right: -40px;
+                width: 80%;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        .social-and-prev-next-buttons {
+            width: 75%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-section {
+        .hero-slider {
+            .home-card {
+                width: calc(100% - 16rem);
             }
         }
     }

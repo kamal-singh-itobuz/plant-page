@@ -47,19 +47,46 @@
   border: 2px solid #09270D;
 }
 .hero-section .hero-content .button-buy-plant {
-  z-index: 2;
+  z-index: 3;
+}
+.hero-section .hero-next-prev-buttons img {
+  width: 3.5rem;
 }
 .hero-section .hero-slider .home-card {
-  height: 85%;
-  width: calc(100% - 16rem);
+  transition: all 0.6s ease;
+  width: 100%;
   flex-shrink: 0;
 }
 .hero-section .hero-slider .home-card img {
   height: 100%;
   width: 100%;
-  z-index: 0;
 }
 
+@media (min-width: 576px) {
+  .hero-section .hero-slider .home-card {
+    width: 100%;
+  }
+  .hero-section .hero-slider .home-card img {
+    height: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .hero-section .hero-slider .home-card {
+    margin-right: -40px;
+    width: 80%;
+  }
+  .hero-section .hero-slider .home-card img {
+    height: 100%;
+  }
+  .hero-section .social-and-prev-next-buttons {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-section .hero-slider .home-card {
+    width: calc(100% - 16rem);
+  }
+}
 .plant-collection-images {
   overflow: hidden;
 }
