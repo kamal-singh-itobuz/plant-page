@@ -41,11 +41,11 @@
                     <form class="mb-4 mb-lg-0">
                         <input class="search-bar form-control me-2 rounded-pill" type="search"
                             placeholder="Search Products..." aria-label="Search">
-                        <img class="search-icon" src="./images/navbar/search.svg" alt="Search icon">
+                        <img role="button" class="search-icon" src="./images/navbar/search.svg" alt="Search icon">
                     </form>
                     <div class="d-flex gap-5">
-                        <img src="./images/navbar/add-user.svg" alt="Add User">
-                        <img src="./images/navbar/bag.svg" alt="Bag">
+                        <img role="button" src="./images/navbar/add-user.svg" alt="Add User">
+                        <img role="button" src="./images/navbar/bag.svg" alt="Bag">
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <hr>
                     <p>Love Nature</p>
                 </div>
-                <h1>Take a new friend to your home</h1>
+                <h1 class="heading-hero-section">Take a new friend to your home</h1>
                 <div class="hero-buttons d-flex gap-3">
                     <button class="button-plant-care text-nowrap" role="button">Plant care</button>
                     <button class="button-buy-plant text-nowrap" role="button">Buy a Plant</button>
@@ -69,28 +69,35 @@
         </div>
         <div class="social-and-prev-next-buttons d-flex justify-content-between">
             <div class="hero-social-media-logos d-flex gap-4">
-                <img src="./images/ask-anything/facebook.svg" alt="Facebook">
-                <img src="./images/ask-anything/instagram.svg" alt="Instagram">
-                <img src="./images/ask-anything/pinterest.svg" alt="Pinterest">
+                <img role="button" src="./images/ask-anything/facebook.svg" alt="Facebook">
+                <img role="button" src="./images/ask-anything/instagram.svg" alt="Instagram">
+                <img role="button" src="./images/ask-anything/pinterest.svg" alt="Pinterest">
             </div>
             <div class="hero-next-prev-buttons">
-                <img class="hero-left-slider-button" src="./images/home/left-arrow.svg" alt="Prev">
-                <img class="hero-right-slider-button" src="./images/home/right-arrow.svg" alt="next">
+                <img role="button" class="hero-left-slider-button" src="./images/home/left-arrow.svg" alt="Prev">
+                <div class="range-sliding">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img role="button" class="hero-right-slider-button" src="./images/home/right-arrow.svg" alt="next">
             </div>
         </div>
     </section>
 
-    <section class="container plant-collection">
+    <section class="plant-collection container">
         <h2 class="heading-plant-collection my-5 text-center">Plant Collection</h2>
         <div class="plant-collection d-flex flex-column flex-md-row gap-4">
             <div class="plant-collection-images d-flex gap-4"></div>
             <div class="prev-next-buttons d-flex justify-content-center gap-2 flex-md-column-reverse">
-                <img class="prev-button" role="button" src="./images/plant-collection/arrow-previous.svg"
+                <!-- <img class="prev-button" role="button" src="./images/plant-collection/arrow-previous.svg"
                     alt="Arrow Next">
                 <img class="next-button" role="button" src="./images/plant-collection/arrow-next.svg"
-                    alt="Arrow Previous">
-            </div>
-        </div>
+                    alt="Arrow Previous"> -->
+                <div class="prev-button d-flex justify-content-center align-items-center" role="button">
+                    < </div>
+                        <div class="next-button d-flex justify-content-center align-items-center" role="button"> >
+                        </div>
     </section>
 
     <section class="our-journey container-fluid px-5 row justify-content-lg-around gap-2 position-relative p-0">
@@ -156,7 +163,7 @@
         <div class="ask-anything-image">
             <img src="./images/ask-anything/ask-anything-image.png" alt="Ask Anything Image">
         </div>
-        <form class="ask-anything-form p-5">
+        <form class="ask-anything-form d-flex flex-column justify-content-center gap-5 gap-lg-2">
             <h2 class="heading-ask-anything mb-4"> Ask Us Anything</h2>
             <div>
                 <input class="w-100 my-2" type="text" placeholder="Name">
@@ -222,27 +229,65 @@
     </section>
 
     <section class="client-section mt-5">
-        <h2 class="heading-client px-5 my-5">What clients say about us</h2>
-        <div class="client-carousel d-flex gap-5 overflow-scroll">
-            <div class="client-card d-flex gap-5 flex-shrink-0 p-5 bg-success rounded-3">
-                <div class="image-container"><img src="./images/client-section/client.png" alt="Client one"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus nesciunt explicabo quasi nam sint
-                    deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit mollitia!
-                    Maiores, officia?</p>
+        <h2 class="heading-client-section px-5 my-5">What clients say about us</h2>
+        <div class="client-carousel d-flex gap-5 overflow-hidden ">
+            <div class="client-card d-flex flex-shrink-0 position-relative">
+                <div class="position-relative bg-success p-5 d-flex flex-column flex-sm-row align-items-center gap-5">
+                    <img class="client-image" src="./images/client-section/client.png" alt="Client one">
+                    <p>Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit.
+                        Modi minus
+                        nesciunt explicabo quasi nam sint
+                        deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit
+                        mollitia!
+                        Maiores, officia?
+                    </p>
+                    <img src="./images/client-section/upper-comma.svg" alt="Upper Comma"
+                        class="client-upper-comma position-absolute ">
+                    <img src="./images/client-section/bottom-comma.svg" alt="Botoom Comma"
+                        class="client-bottom-comma position-absolute ">
+                </div>
+                <img class="d-none d-sm-block" role="button" src="./images/client-section/arrow.svg" alt="Arrow">
             </div>
-            <div class="client-card d-flex gap-5 flex-shrink-0 p-5 bg-success rounded-3">
-                <div class="image-container"><img src="./images/client-section/client.png" alt="Client one"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus nesciunt explicabo quasi nam sint
-                    deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit mollitia!
-                    Maiores, officia?</p>
+            <div class="client-card d-flex flex-shrink-0 position-relative">
+                <div class="position-relative bg-success p-5 d-flex flex-column flex-sm-row align-items-center gap-5">
+                    <img class="client-image" src="./images/client-section/client.png" alt="Client one">
+                    <p>Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit.
+                        Modi minus
+                        nesciunt explicabo quasi nam sint
+                        deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit
+                        mollitia!
+                        Maiores, officia?
+                    </p>
+                    <img src="./images/client-section/upper-comma.svg" alt="Upper Comma"
+                        class="client-upper-comma position-absolute ">
+                    <img src="./images/client-section/bottom-comma.svg" alt="Botoom Comma"
+                        class="client-bottom-comma position-absolute ">
+                </div>
+                <img class="d-none d-sm-block" role="button" src="./images/client-section/arrow.svg" alt="Arrow">
             </div>
-            <div class="client-card d-flex gap-5 flex-shrink-0 p-5 bg-success rounded-3">
-                <div class="image-container"><img src="./images/client-section/client.png" alt="Client one"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus nesciunt explicabo quasi nam sint
-                    deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit mollitia!
-                    Maiores, officia?</p>
+            <div class="client-card d-flex flex-shrink-0 position-relative">
+                <div class="position-relative bg-success p-5 d-flex flex-column flex-sm-row align-items-center gap-5">
+                    <img class="client-image" src="./images/client-section/client.png" alt="Client one">
+                    <p>Lorem ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit.
+                        Modi minus
+                        nesciunt explicabo quasi nam sint
+                        deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit
+                        mollitia!
+                        Maiores, officia?
+                    </p>
+                    <img src="./images/client-section/upper-comma.svg" alt="Upper Comma"
+                        class="client-upper-comma position-absolute ">
+                    <img src="./images/client-section/bottom-comma.svg" alt="Botoom Comma"
+                        class="client-bottom-comma position-absolute ">
+                </div>
+                <img class="d-none d-sm-block" role="button" src="./images/client-section/arrow.svg" alt="Arrow">
             </div>
-
         </div>
     </section>
 

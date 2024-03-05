@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +25,12 @@
 .hero-section .hero-content hr {
   width: 2rem;
   height: 0.1rem;
+}
+.hero-section .hero-content .heading-hero-section {
+  color: #3E8847;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
 }
 .hero-section .hero-content .button-plant-care {
   background-color: white;
@@ -87,20 +94,46 @@
     width: calc(100% - 16rem);
   }
 }
-.plant-collection-images {
+.plant-collection .heading-plant-collection {
+  color: #09270D;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+}
+.plant-collection .plant-collection-images {
   overflow: hidden;
 }
-.plant-collection-images .plant-collection-card {
+.plant-collection .plant-collection-images .plant-collection-card {
+  transition: all 0.8s ease;
   height: 28rem;
   width: 24rem;
   flex-shrink: 0;
 }
-.plant-collection-images .plant-collection-card img {
+.plant-collection .plant-collection-images .plant-collection-card img {
   height: 90%;
   width: 100%;
+  transition: transform 0.6s ease;
 }
-.plant-collection-images .plant-collection-card p {
+.plant-collection .plant-collection-images .plant-collection-card img:hover {
+  transform: rotate(-5deg);
+}
+.plant-collection .plant-collection-images .plant-collection-card p {
   margin-top: 1rem;
+}
+.plant-collection .prev-next-buttons .prev-button, .plant-collection .prev-next-buttons .next-button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  transition: all 0.3s ease;
+}
+.plant-collection .prev-next-buttons .prev-button:hover {
+  color: #F5C771;
+  border: 1.5px solid #F5C771;
+}
+.plant-collection .prev-next-buttons .next-button:hover {
+  color: #09270D;
+  border: 1.5px solid #09270D;
 }
 
 .our-journey {
@@ -117,6 +150,12 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.our-journey .our-journey-content .heading-our-journey {
+  color: #09270D;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
 }
 .our-journey .our-journey-content .button-our-journey {
   max-width: 10rem;
@@ -151,6 +190,12 @@
     width: 15rem;
   }
 }
+.our-advantages .heading-our-advantages {
+  color: #09270D;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+}
 .our-advantages .advantage-card > div {
   background-color: #FAF9F7;
 }
@@ -177,16 +222,25 @@
 }
 
 .ask-anything .ask-anything-image {
-  height: 70%;
+  height: 100%;
+  padding: 1rem;
 }
 .ask-anything .ask-anything-image > img {
   height: 100%;
   width: 100%;
 }
 .ask-anything .ask-anything-form {
+  border-radius: 1.5rem 0 0 1.5rem;
+  padding: 2rem;
   margin-left: -5%;
-  height: 60%;
+  height: 90%;
   background-color: #FAF9F7;
+}
+.ask-anything .ask-anything-form .heading-ask-anything {
+  color: #09270D;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
 }
 .ask-anything .ask-anything-form input, .ask-anything .ask-anything-form textarea {
   outline: none;
@@ -205,6 +259,28 @@
   border: 0;
 }
 
+@media (min-width: 576px) {
+  .ask-anything .ask-anything-image {
+    padding: 3rem;
+  }
+  .ask-anything .ask-anything-form {
+    padding: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .ask-anything {
+    height: 80vh;
+  }
+  .ask-anything .ask-anything-image {
+    padding: 0;
+  }
+}
+.chooser-section .heading-chooser-section {
+  color: #09270D;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+}
 .chooser-section .chooser-cards .chooser-card > div {
   transition: all 0.5s ease;
 }
@@ -212,6 +288,7 @@
   color: #09270D;
   font-size: 1.5rem;
   font-weight: 500;
+  font-family: "Playfair Display", sans-serif;
 }
 .chooser-section .chooser-cards .chooser-card > div .image-container {
   width: 6rem;
@@ -248,22 +325,66 @@
   color: white;
   font-size: 1.5rem;
   font-weight: 500;
+  font-family: "Playfair Display", sans-serif;
 }
 .chooser-section .chooser-cards .chooser-card > div:hover .chooser-plant-text-content {
   color: white;
 }
 
-.client-section .client-carousel .client-card {
-  width: 50%;
+.client-section .heading-client-section {
+  color: #09270D;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
 }
-.client-section .client-carousel .client-card .image-container {
+.client-section .client-carousel .client-card {
+  transition: all 0.5s ease;
+  width: 100%;
+}
+.client-section .client-carousel .client-card > div {
+  border-radius: 1rem;
+}
+.client-section .client-carousel .client-card .client-image {
   height: 6rem;
   width: 6rem;
 }
-.client-section .client-carousel .client-card .image-container img {
-  height: 100%;
+.client-section .client-carousel .client-card .client-upper-comma {
+  left: 0rem;
+  top: 2rem;
+}
+.client-section .client-carousel .client-card .client-bottom-comma {
+  right: 0rem;
+  bottom: -2rem;
 }
 
+@media (min-width: 576px) {
+  .client-section .client-carousel .client-card {
+    width: 75%;
+  }
+  .client-section .client-carousel .client-card .client-image {
+    height: 6rem;
+    width: 6rem;
+    margin-left: -6rem;
+    margin-right: 3rem;
+  }
+  .client-section .client-carousel .client-card .client-upper-comma {
+    left: 3rem;
+    top: -4rem;
+  }
+  .client-section .client-carousel .client-card .client-bottom-comma {
+    right: 0rem;
+    bottom: -3rem;
+  }
+}
+@media (min-width: 992px) {
+  .client-section .client-carousel .client-card {
+    width: 60%;
+  }
+  .client-section .client-carousel .client-card .client-image {
+    height: 6rem;
+    width: 6rem;
+  }
+}
 .plant-care .plant-care-content {
   width: 80%;
 }
@@ -274,8 +395,9 @@
 }
 .plant-care .plant-care-content .heading-plant-care {
   color: #09270D;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 500;
+  font-family: "Playfair Display", sans-serif;
 }
 .plant-care .plant-care-content .text-content-plant-care {
   font-size: 1.1rem;

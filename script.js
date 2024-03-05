@@ -32,23 +32,26 @@ function plantCollection (plantCollectionImages, container, section){
     });
 }
 plantCollection(plantCollectionImages, plantImagesSection, "plant-collection");
+const plantCollectionCards = document.querySelectorAll('.plant-collection-card');
+let currentPlantCollectionCard = 0;
 
 previousButton.addEventListener('click', () => {
-    plantImagesSection.innerHTML = '';
-    const card = plantCollectionImages.shift();
-    plantCollectionImages.push(card);
-    plantCollection(plantCollectionImages, plantImagesSection, "plant-collection");
+    currentPlantCollectionCard = (currentPlantCollectionCard+1)%plantCollectionCards.length;
+    plantCollectionCards.forEach(card => card.style.transform = `translateX(-${100*currentPlantCollectionCard}%)`);
+});
+nextButton.addEventListener('click', () => {
+    currentPlantCollectionCard = (currentPlantCollectionCard+1)%plantCollectionCards.length;
+    plantCollectionCards.forEach(card => card.style.transform = `translateX(${100*currentPlantCollectionCard}%)`);
 });
 
-nextButton.addEventListener('click', () => {
-    plantImagesSection.innerHTML = '';
-    const card = plantCollectionImages.pop()
-    plantCollectionImages.unshift(card);
-    plantCollection(plantCollectionImages, plantImagesSection, "plant-collection");
-});
+// nextButton.addEventListener('click', () => {
+//     plantImagesSection.innerHTML = '';
+//     const card = plantCollectionImages.pop()
+//     plantCollectionImages.unshift(card);
+//     plantCollection(plantCollectionImages, plantImagesSection, "plant-collection");
+// });
 
 // HOME SLIDER
-
 plantCollection(heroSliderImages, heroSliderContainer, "home");
 
 const heroCards = document.querySelectorAll('.home-card');
@@ -68,3 +71,15 @@ heroNextButton.addEventListener('click', () => {
     updateHeroCarousel(heroCards, currentHeroSlide);
 });
 
+
+// CLIENT SECTION
+let currentClientIndex = 0;
+function nextClient(clientCards, noOfClients){
+    clientCards.forEach(ele => ele.style.transform = `translateX(-${100*currentClientIndex}%)`);
+    currentClientIndex = (currentClientIndex+1)%noOfClients;
+}
+const clientCards = document.querySelectorAll('.client-card');
+
+setInterval(() => {
+    nextClient(clientCards, clientCards.length);
+}, 1500);

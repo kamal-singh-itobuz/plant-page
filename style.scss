@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 $light-green-color: #3E8847;
 $dark-green-color: #09270D;
 $grey-text-color: #727272;
@@ -24,6 +25,7 @@ $grey-text-color: #727272;
         color: $color;
         font-size: $fs;
         font-weight: $fw;
+        font-family: "Playfair Display", sans-serif;
     }
 }
 
@@ -49,6 +51,7 @@ $grey-text-color: #727272;
             width: 2rem;
             height: 0.1rem;
         }
+        @include heading-style("hero-section", 3rem, 600, $light-green-color);
         @include button-style("plant-care", 1.2rem, 600,  white, $dark-green-color);
         @include button-style("buy-plant", 1.2rem, 600,  $dark-green-color, white);
         .button-plant-care {
@@ -116,18 +119,43 @@ $grey-text-color: #727272;
 }
 
 //Plant Collection
-.plant-collection-images {
-    overflow: hidden;
-    .plant-collection-card{
-        height: 28rem;
-        width: 24rem;
-        flex-shrink: 0;
-        img {
-            height: 90%;
-            width: 100%;
+.plant-collection{
+    @include heading-style("plant-collection", 2rem, 600, $dark-green-color);
+    .plant-collection-images {
+        overflow: hidden;
+        .plant-collection-card{
+            transition: all 0.8s ease;
+            height: 28rem;
+            width: 24rem;
+            flex-shrink: 0;
+            img {
+                height: 90%;
+                width: 100%;
+                transition: transform 0.6s ease;
+                &:hover {
+                    transform: rotate(-5deg);
+                }
+            }
+            p{
+                margin-top: 1rem;
+            }
         }
-        p{
-            margin-top: 1rem;
+    }
+    .prev-next-buttons {
+        .prev-button, .next-button {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            border: 1.5px solid black;
+            transition: all 0.3s ease;
+        }
+        .prev-button:hover {
+            color: #F5C771;
+            border: 1.5px solid #F5C771;
+        }
+        .next-button:hover {
+            color: $dark-green-color;
+            border: 1.5px solid $dark-green-color;
         }
     }
 }
@@ -148,6 +176,7 @@ $grey-text-color: #727272;
         }
     }
     .our-journey-content {
+        @include heading-style("our-journey", 2rem, 600, $dark-green-color);
         .button-our-journey{
             max-width: 10rem;
         }
@@ -179,6 +208,7 @@ $grey-text-color: #727272;
 
 // Our Advantages
 .our-advantages {
+    @include heading-style("our-advantages", 2rem, 600, $dark-green-color);
     .advantage-card{
         >div {
             background-color: #FAF9F7;
@@ -210,16 +240,20 @@ $grey-text-color: #727272;
 //Ask Us Anything Section
 .ask-anything {
     .ask-anything-image {
-        height: 70%;
+        height: 100%;
+        padding: 1rem;
         >img {
             height: 100%;
             width: 100%;
         }
     }
     .ask-anything-form{
+        border-radius: 1.5rem 0 0 1.5rem;
+        padding: 2rem;
         margin-left: -5%;
-        height: 60%;
+        height: 90%;
         background-color: #FAF9F7;
+        @include heading-style("ask-anything", 2rem, 600, $dark-green-color);
         input, textarea{
             outline: none;
             padding-bottom: 0.5rem;
@@ -230,9 +264,28 @@ $grey-text-color: #727272;
     }
     @include button-style("ask-anything", 1.1rem, 600, $dark-green-color, white)
 }
+@media (min-width: 576px) {
+    .ask-anything {
+        .ask-anything-image {
+            padding: 3rem;
+        }
+        .ask-anything-form{
+            padding: 5rem;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .ask-anything {
+        height: 80vh;
+        .ask-anything-image {
+            padding: 0;
+        }
+    }
+}
 
 //chooser section
 .chooser-section {
+    @include heading-style("chooser-section", 2rem, 600, $dark-green-color);
     .chooser-cards{
         .chooser-card {
             >div{
@@ -280,19 +333,66 @@ $grey-text-color: #727272;
 
 // Client Section
 .client-section {
+    @include heading-style("client-section", 2rem, 600, $dark-green-color);
     .client-carousel {
         .client-card {
-            width: 50%;
-            .image-container {
+            transition: all 0.5s ease;
+            >div{
+                border-radius: 1rem;
+            }
+            width: 100%;
+            .client-image {
                 height: 6rem;
                 width: 6rem;
-                img {
-                    height: 100%;
+            }
+            .client-upper-comma {
+                left: 0rem;
+                top: 2rem;
+            }
+            .client-bottom-comma {
+                right: 0rem;
+                bottom: -2rem;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+    .client-section {
+        .client-carousel {
+            .client-card {
+                width: 75%;
+                .client-image {
+                    height: 6rem;
+                    width: 6rem;
+                    margin-left: -6rem;
+                    margin-right: 3rem;
+                }
+                .client-upper-comma {
+                    left: 3rem;
+                    top: -4rem;
+                }
+                .client-bottom-comma {
+                    right: 0rem;
+                    bottom: -3rem;
                 }
             }
         }
     }
 }
+@media (min-width: 992px) {
+    .client-section {
+        .client-carousel {
+            .client-card {
+                width: 60%;
+                .client-image {
+                    height: 6rem;
+                    width: 6rem;
+                }
+            }
+        }
+    }
+}
+
 
 //Take Care Section
 .plant-care {
@@ -303,7 +403,7 @@ $grey-text-color: #727272;
             bottom: -2rem;
             right: 12rem;
         }
-        @include heading-style("plant-care", 2.2rem, 500, $dark-green-color);
+        @include heading-style("plant-care", 2rem, 500, $dark-green-color);
         .text-content-plant-care{
             font-size: 1.1rem;
             color: $grey-text-color;
