@@ -11,20 +11,22 @@ const clientCardContent = document.querySelectorAll('.client-card-content');
 const clientCardText = document.querySelectorAll('.client-card-text');
 
 const plantCollectionImages = [{ imageName: "bird-paradise", name: "1. Bird of Paradise" }, { imageName: "rubber-plant", name: "2. Rubber Plants" }, { imageName: "string-pearls", name: "3. String of Pearls" }, { imageName: "rubber-plant", name: "4. Rubber Plants" }];
-const heroSliderImages = [{ imageName: "main-plant" }, { imageName: "main-plant-copy1" }, { imageName: "main-plant-copy2" }];
+const heroSliderImages = [{ imageName: "main-plant" }, { imageName: "big-leaf" }, { imageName: "smaller-leaf" }];
 const noOfHeroSlides = heroSliderImages.length;
 let currentHeroSlide = 0;
 let currentPlantCollectionCard = 0;
 let currentClientIndex = 1;
 
 function updateHeroCarousel(heroCards, current, heroRangeSlider) {
+    const heightForAll = screen.width < 576 ? "24rem" : (screen.width >= 576 && screen.width < 768 ? "34rem" : "38rem");
+    const heightForCurrent = screen.width < 576 ? "20rem" : (screen.width >= 576 && screen.width < 768 ? "30rem" : "34rem");
     heroCards.forEach((card, index) => {
-        card.style.height = "38rem";
+        card.style.height = heightForAll;
         card.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
         card.style.zIndex = 0;
         heroRangeSlider[index].style.backgroundColor = "#3E8847";
     });
-    heroCards[current].style.height = "35rem";
+    heroCards[current].style.height = heightForCurrent;
     heroCards[current].style.zIndex = 2;
     heroRangeSlider[current].style.backgroundColor = "#09270D";
 }
@@ -51,11 +53,12 @@ sliderHTMLCreation(plantCollectionImages, plantImagesSection, "plant-collection"
 const plantCollectionCards = document.querySelectorAll('.plant-collection-card');
 
 plantCollectionPreviousButton.addEventListener('click', () => {
-    currentPlantCollectionCard = (currentPlantCollectionCard + 1) % plantCollectionCards.length;
+    currentPlantCollectionCard = (currentPlantCollectionCard - 1 + plantCollectionCards.length) % plantCollectionCards.length;
     plantCollectionCards.forEach(card => card.style.transform = `translateX(-${100 * currentPlantCollectionCard}%)`);
 });
+
 plantCollectionNextButton.addEventListener('click', () => {
-    currentPlantCollectionCard = (currentPlantCollectionCard - 1 + plantCollectionCards.length) % plantCollectionCards.length;
+    currentPlantCollectionCard = (currentPlantCollectionCard + 1) % plantCollectionCards.length;
     plantCollectionCards.forEach(card => card.style.transform = `translateX(-${100 * currentPlantCollectionCard}%)`);
 });
 
@@ -67,12 +70,12 @@ const heroCards = document.querySelectorAll('.home-card');
 updateHeroCarousel(heroCards, currentHeroSlide, heroRangeSlider);
 
 heroPreviousButton.addEventListener('click', () => {
-    currentHeroSlide = (currentHeroSlide + 1) % noOfHeroSlides;
+    currentHeroSlide = (currentHeroSlide - 1 + noOfHeroSlides) % noOfHeroSlides;
     updateHeroCarousel(heroCards, currentHeroSlide, heroRangeSlider);
 });
 
 heroNextButton.addEventListener('click', () => {
-    currentHeroSlide = (currentHeroSlide - 1 + noOfHeroSlides) % noOfHeroSlides;
+    currentHeroSlide = (currentHeroSlide + 1) % noOfHeroSlides;
     updateHeroCarousel(heroCards, currentHeroSlide, heroRangeSlider);
 });
 
@@ -86,6 +89,7 @@ heroRangeSlider.forEach((ele, index) => {
 // CLIENT SECTION
 clientCardContent[0].style.backgroundColor = "#3E8847";
 clientCardText[0].style.color = "white";
+
 clientRightButton.forEach((button, index) => {
     button.addEventListener('click', () => {
         if (index === clientRightButton.length - 1) {

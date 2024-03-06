@@ -101,6 +101,7 @@
 .hero-section .hero-slider .home-card img {
   height: 100%;
   width: 100%;
+  border-radius: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -108,7 +109,14 @@
     width: 100%;
   }
   .hero-section .hero-slider .home-card img {
-    height: 80%;
+    height: 100%;
+    width: 100%;
+  }
+  .hero-section .hero-next-prev-buttons img {
+    width: 3.2rem;
+  }
+  .hero-section .hero-next-prev-buttons .range-sliding-span {
+    width: 2.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -118,6 +126,7 @@
   }
   .hero-section .hero-slider .home-card img {
     height: 100%;
+    width: 100%;
   }
   .hero-section .social-and-prev-next-buttons {
     width: 75%;
@@ -273,9 +282,10 @@
 .ask-anything .ask-anything-form {
   border-radius: 1.5rem 0 0 1.5rem;
   padding: 2rem;
-  margin-left: -5%;
   height: 90%;
-  background-color: #FAF9F7;
+  margin-top: -50%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .ask-anything .ask-anything-form .heading-ask-anything {
   color: #09270D;
@@ -286,10 +296,12 @@
 .ask-anything .ask-anything-form input,
 .ask-anything .ask-anything-form textarea {
   outline: none;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.1rem;
   border: none;
-  border-bottom: 1px solid grey;
-  background-color: #FAF9F7;
+  border-bottom: 1px solid rgba(138, 136, 136, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .ask-anything .ask-anything-form .button-ask-anything {
   transition: all 0.5s ease;
@@ -322,6 +334,15 @@
   }
   .ask-anything .ask-anything-image {
     padding: 0;
+  }
+  .ask-anything .ask-anything-form {
+    margin-top: unset;
+    margin-left: -5%;
+    background-color: #FAF9F7;
+  }
+  .ask-anything .ask-anything-form input,
+  .ask-anything .ask-anything-form textarea {
+    background-color: #FAF9F7;
   }
 }
 .chooser-section .heading-chooser-section {
@@ -498,7 +519,7 @@
   border: 2px solid #09270D;
 }
 .plant-care .plant-care-image {
-  width: 80%;
+  width: 95%;
 }
 .plant-care .plant-care-image img {
   width: 100%;

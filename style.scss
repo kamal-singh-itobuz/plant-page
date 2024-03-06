@@ -33,6 +33,7 @@ $grey-text-color: #727272;
 .navbar {
     @include heading-style("navbar", 2.4rem, 700, $grey-text-color);
     background-color: #f4f8f6;
+
     form {
         position: relative;
         max-width: 15rem;
@@ -120,6 +121,7 @@ $grey-text-color: #727272;
             img {
                 height: 100%;
                 width: 100%;
+                border-radius: 1rem;
             }
         }
     }
@@ -132,8 +134,19 @@ $grey-text-color: #727272;
                 width: 100%;
 
                 img {
-                    height: 80%;
+                    height: 100%;
+                    width: 100%;
                 }
+            }
+        }
+
+        .hero-next-prev-buttons {
+            img {
+                width: 3.2rem;
+            }
+
+            .range-sliding-span {
+                width: 2.5rem;
             }
         }
     }
@@ -148,6 +161,7 @@ $grey-text-color: #727272;
 
                 img {
                     height: 100%;
+                    width: 100%;
                 }
             }
         }
@@ -336,18 +350,19 @@ $grey-text-color: #727272;
     .ask-anything-form {
         border-radius: 1.5rem 0 0 1.5rem;
         padding: 2rem;
-        margin-left: -5%;
         height: 90%;
-        background-color: #FAF9F7;
+        margin-top: -50%;
+        backdrop-filter: blur(5px);
         @include heading-style("ask-anything", 2rem, 600, $dark-green-color);
 
         input,
         textarea {
             outline: none;
-            padding-bottom: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            font-size: 1.1rem;
             border: none;
-            border-bottom: 1px solid grey;
-            background-color: #FAF9F7;
+            border-bottom: 1px solid rgba(138, 136, 136, 0.3);
+            backdrop-filter: blur(5px);
         }
 
         .button-ask-anything {
@@ -381,6 +396,17 @@ $grey-text-color: #727272;
 
         .ask-anything-image {
             padding: 0;
+        }
+
+        .ask-anything-form {
+            margin-top: unset;
+            margin-left: -5%;
+            background-color: #FAF9F7;
+
+            input,
+            textarea {
+                background-color: #FAF9F7;
+            }
         }
     }
 }
@@ -452,17 +478,21 @@ $grey-text-color: #727272;
     .client-carousel {
         .client-card {
             transition: all 0.5s ease;
+
             .client-card-content {
                 box-shadow: 0 0 20px rgb(216, 215, 215);
-                p{
+
+                p {
                     color: $grey-text-color;
                 }
             }
+
             .client-arrow {
                 width: 2rem;
                 top: 0.5rem;
                 right: 0.5rem;
             }
+
             >div {
                 border-radius: 1rem;
             }
@@ -494,11 +524,13 @@ $grey-text-color: #727272;
         .client-carousel {
             .client-card {
                 width: 75%;
+
                 .client-arrow {
                     top: 0.6rem;
                     right: 0.6rem;
                     width: 2.5rem;
                 }
+
                 .client-image {
                     height: 6rem;
                     width: 6rem;
@@ -523,15 +555,18 @@ $grey-text-color: #727272;
         .client-carousel {
             .client-card {
                 width: 60%;
+
                 .client-arrow {
                     top: 2rem;
                     right: 2rem;
                     width: 3rem;
                 }
+
                 .client-image {
                     height: 6rem;
                     width: 6rem;
                 }
+
                 .client-upper-comma {
                     left: 8rem;
                     top: -1rem;
@@ -578,7 +613,7 @@ $grey-text-color: #727272;
     }
 
     .plant-care-image {
-        width: 80%;
+        width: 95%;
 
         img {
             width: 100%;
