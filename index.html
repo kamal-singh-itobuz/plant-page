@@ -20,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarSupportedContent">
-                <ul class="navbar-nav d-lg-flex gap-lg-4 mb-2 mb-lg-0">
+                <ul class="navbar-nav d-flex flex-column align-items-center flex-lg-row gap-lg-3 gap-xl-4 mb-2 mb-lg-0">
                     <li class="nav-item ">
                         <a class="nav-link text-dark " href="#">About</a>
                     </li>
@@ -37,13 +37,13 @@
                         <a class="nav-link text-dark" href="#"> Help </a>
                     </li>
                 </ul>
-                <div class="d-lg-flex gap-lg-5">
+                <div class="d-flex flex-column flex-lg-row gap-lg-5 align-items-center">
                     <form class="mb-4 mb-lg-0">
                         <input class="search-bar form-control me-2 rounded-pill" type="search"
                             placeholder="Search Products..." aria-label="Search">
                         <img role="button" class="search-icon" src="./images/navbar/search.svg" alt="Search icon">
                     </form>
-                    <div class="d-flex gap-5">
+                    <div class="d-flex gap-5 gap-lg-3 gap-xl-5">
                         <img role="button" src="./images/navbar/add-user.svg" alt="Add User">
                         <img role="button" src="./images/navbar/bag.svg" alt="Bag">
                     </div>
@@ -90,7 +90,7 @@
     <section class="plant-collection container">
         <h2 class="heading-plant-collection my-5 text-center">Plant Collection</h2>
         <div class="plant-collection d-flex flex-column flex-md-row gap-4">
-            <div class="plant-collection-images d-flex gap-4"></div>
+            <div class="plant-collection-images overflow-hidden d-flex gap-4"></div>
             <div class="prev-next-buttons d-flex justify-content-center gap-2 flex-md-column-reverse">
                 <div class="prev-button d-flex justify-content-center align-items-center" role="button">
                     < </div>
@@ -228,63 +228,60 @@
 
     <section class="client-section mt-5">
         <h2 class="heading-client-section px-5 my-5">What clients say about us</h2>
-        <div class="client-carousel d-flex gap-5 overflow-hidden ">
-            <div class="client-card d-flex flex-shrink-0 position-relative">
-                <div class="position-relative bg-success p-5 d-flex flex-column flex-sm-row align-items-center gap-5">
+        <div class="client-carousel d-flex gap-0 gap-lg-2 overflow-hidden">
+            <div class="client-card d-flex flex-shrink-0 p-1 p-sm-3 p-lg-4 position-relative">
+                <div
+                    class="client-card-content position-relative p-3 p-md-4 p-lg-5 d-flex flex-column flex-sm-row align-items-center gap-3">
                     <img class="client-image" src="./images/client-section/client.png" alt="Client one">
-                    <p>Lorem ipsum dolor sit amet
-                        consectetur
-                        adipisicing elit.
-                        Modi minus
-                        nesciunt explicabo quasi nam sint
-                        deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit
-                        mollitia!
-                        Maiores, officia?
+                    <p class="client-card-text">1. It is a long established fact that a reader will be distracted by the
+                        readable content of a
+                        page
+                        when It is a long .It is a long .It is a long established fact that a reader will be . It is a
+                        long established fact that a reader .
                     </p>
                     <img src="./images/client-section/upper-comma.svg" alt="Upper Comma"
                         class="client-upper-comma position-absolute ">
                     <img src="./images/client-section/bottom-comma.svg" alt="Botoom Comma"
                         class="client-bottom-comma position-absolute ">
                 </div>
-                <img class="d-none d-sm-block" role="button" src="./images/client-section/arrow.svg" alt="Arrow">
+                <img class="client-arrow position-absolute" role="button" src="./images/client-section/arrow.svg"
+                    alt="left Arrow">
             </div>
-            <div class="client-card d-flex flex-shrink-0 position-relative">
-                <div class="position-relative bg-success p-5 d-flex flex-column flex-sm-row align-items-center gap-5">
+            <div class="client-card d-flex flex-shrink-0 p-1 p-sm-3 p-lg-4 position-relative ">
+                <div
+                    class=" client-card-content position-relative p-3 p-md-4 p-lg-5 d-flex flex-column flex-sm-row align-items-center gap-3">
                     <img class="client-image" src="./images/client-section/client.png" alt="Client one">
-                    <p>Lorem ipsum dolor sit amet
-                        consectetur
-                        adipisicing elit.
-                        Modi minus
-                        nesciunt explicabo quasi nam sint
-                        deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit
-                        mollitia!
-                        Maiores, officia?
+                    <p class="client-card-text">2. It is a long established fact that a reader will be distracted by the
+                        readable content of a
+                        page
+                        when It is a long .It is a long .It is a long established fact that a reader will be . It is a
+                        long established fact that a reader .
                     </p>
                     <img src="./images/client-section/upper-comma.svg" alt="Upper Comma"
                         class="client-upper-comma position-absolute ">
                     <img src="./images/client-section/bottom-comma.svg" alt="Botoom Comma"
                         class="client-bottom-comma position-absolute ">
                 </div>
-                <img class="d-none d-sm-block" role="button" src="./images/client-section/arrow.svg" alt="Arrow">
+                <img class="client-arrow position-absolute" role="button" src="./images/client-section/arrow.svg"
+                    alt="left Arrow">
             </div>
-            <div class="client-card d-flex flex-shrink-0 position-relative">
-                <div class="position-relative bg-success p-5 d-flex flex-column flex-sm-row align-items-center gap-5">
+            <div class="client-card d-flex flex-shrink-0 p-1 p-sm-3 p-lg-4 position-relative ">
+                <div
+                    class="client-card-content position-relative p-3 p-md-4 p-lg-5 d-flex flex-column flex-sm-row align-items-center gap-3">
                     <img class="client-image" src="./images/client-section/client.png" alt="Client one">
-                    <p>Lorem ipsum dolor sit amet
-                        consectetur
-                        adipisicing elit.
-                        Modi minus
-                        nesciunt explicabo quasi nam sint
-                        deleniti cum, voluptatum ab alias optio. Nam voluptate laboriosam consectetur esse impedit
-                        mollitia!
-                        Maiores, officia?
+                    <p class="client-card-text">3. It is a long established fact that a reader will be distracted by the
+                        readable content of a
+                        page
+                        when It is a long .It is a long .It is a long established fact that a reader will be . It is a
+                        long established fact that a reader .
                     </p>
                     <img src="./images/client-section/upper-comma.svg" alt="Upper Comma"
                         class="client-upper-comma position-absolute ">
                     <img src="./images/client-section/bottom-comma.svg" alt="Botoom Comma"
                         class="client-bottom-comma position-absolute ">
                 </div>
-                <img class="d-none d-sm-block" role="button" src="./images/client-section/arrow.svg" alt="Arrow">
+                <img class="client-arrow position-absolute" role="button" src="./images/client-section/arrow.svg"
+                    alt="left Arrow">
             </div>
         </div>
     </section>
@@ -323,29 +320,29 @@
                 </div>
             </div>
             <div class="service-support-company col-12 col-lg-6 row mt-4">
-                <div class="service col-4 d-flex flex-column align-items-center">
+                <div class="service col-4 d-flex flex-column align-items-start">
                     <h3>Service</h3>
                     <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
+                    <a href="#">Lawn Service</a>
+                    <a href="#">Leaf Removal</a>
+                    <a href="#">Decoration</a>
+                    <a href="#">Trimming</a>
                 </div>
-                <div class="support col-4 d-flex flex-column align-items-center">
+                <div class="support col-4 d-flex flex-column align-items-start">
                     <h3>Support</h3>
                     <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
+                    <a href="#">Lawn Service</a>
+                    <a href="#">Leaf Removal</a>
+                    <a href="#">Decoration</a>
+                    <a href="#">Trimming</a>
                 </div>
-                <div class="company col-4 d-flex flex-column align-items-center">
+                <div class="company col-4 d-flex flex-column align-items-start ">
                     <h3>Company</h3>
                     <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
-                    <a href="#">Gardening</a>
+                    <a href="#">Lawn Service</a>
+                    <a href="#">Leaf Removal</a>
+                    <a href="#">Decoration</a>
+                    <a href="#">Trimming</a>
                 </div>
             </div>
         </div>

@@ -1,16 +1,21 @@
 const heroSliderContainer = document.querySelector('.hero-slider');
 const plantImagesSection = document.querySelector('.plant-collection-images');
-const previousButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const clientCards = document.querySelectorAll('.client-card');
+const plantCollectionPreviousButton = document.querySelector('.prev-button');
+const plantCollectionNextButton = document.querySelector('.next-button');
 const heroRangeSlider = document.querySelectorAll('.range-sliding-span');
+const heroPreviousButton = document.querySelector('.hero-left-slider-button');
+const heroNextButton = document.querySelector('.hero-right-slider-button');
+const clientCards = document.querySelectorAll('.client-card');
+const clientRightButton = document.querySelectorAll('.client-arrow');
+const clientCardContent = document.querySelectorAll('.client-card-content');
+const clientCardText = document.querySelectorAll('.client-card-text');
 
 const plantCollectionImages = [{ imageName: "bird-paradise", name: "1. Bird of Paradise" }, { imageName: "rubber-plant", name: "2. Rubber Plants" }, { imageName: "string-pearls", name: "3. String of Pearls" }, { imageName: "rubber-plant", name: "4. Rubber Plants" }];
 const heroSliderImages = [{ imageName: "main-plant" }, { imageName: "main-plant-copy1" }, { imageName: "main-plant-copy2" }];
 const noOfHeroSlides = heroSliderImages.length;
 let currentHeroSlide = 0;
 let currentPlantCollectionCard = 0;
-let currentClientIndex = 0;
+let currentClientIndex = 1;
 
 function updateHeroCarousel(heroCards, current, heroRangeSlider) {
     heroCards.forEach((card, index) => {
@@ -40,14 +45,16 @@ function sliderHTMLCreation(plantCollectionImages, container, section) {
         container.append(imageSection);
     });
 }
+
+//Plant collection 
 sliderHTMLCreation(plantCollectionImages, plantImagesSection, "plant-collection");
 const plantCollectionCards = document.querySelectorAll('.plant-collection-card');
 
-previousButton.addEventListener('click', () => {
+plantCollectionPreviousButton.addEventListener('click', () => {
     currentPlantCollectionCard = (currentPlantCollectionCard + 1) % plantCollectionCards.length;
     plantCollectionCards.forEach(card => card.style.transform = `translateX(-${100 * currentPlantCollectionCard}%)`);
 });
-nextButton.addEventListener('click', () => {
+plantCollectionNextButton.addEventListener('click', () => {
     currentPlantCollectionCard = (currentPlantCollectionCard - 1 + plantCollectionCards.length) % plantCollectionCards.length;
     plantCollectionCards.forEach(card => card.style.transform = `translateX(-${100 * currentPlantCollectionCard}%)`);
 });
@@ -57,8 +64,6 @@ nextButton.addEventListener('click', () => {
 sliderHTMLCreation(heroSliderImages, heroSliderContainer, "home");
 
 const heroCards = document.querySelectorAll('.home-card');
-const heroPreviousButton = document.querySelector('.hero-left-slider-button');
-const heroNextButton = document.querySelector('.hero-right-slider-button');
 updateHeroCarousel(heroCards, currentHeroSlide, heroRangeSlider);
 
 heroPreviousButton.addEventListener('click', () => {
@@ -79,11 +84,28 @@ heroRangeSlider.forEach((ele, index) => {
 });
 
 // CLIENT SECTION
-function nextClient(clientCards, noOfClients) {
-    clientCards.forEach(ele => ele.style.transform = `translateX(-${100 * currentClientIndex}%)`);
-    currentClientIndex = (currentClientIndex + 1) % noOfClients;
-}
+clientCardContent[0].style.backgroundColor = "#3E8847";
+clientCardText[0].style.color = "white";
+clientRightButton.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        if (index === clientRightButton.length - 1) {
+            clientCards.forEach((card, idx) => {
+                card.style.transform = `translateX(${0}%)`;
+                clientCardContent[idx].style.backgroundColor = "white";
+                clientCardText[idx].style.color = "#727272";
+            });
+            clientCardContent[0].style.backgroundColor = "#3E8847";
+            clientCardText[0].style.color = "white";
+        }
+        else {
+            clientCards.forEach(card => {
+                card.style.transform = `translateX(-${100 * (index + 1)}%)`;
+            });
+            clientCardContent[index].style.backgroundColor = "white";
+            clientCardText[index].style.color = "#727272";
+            clientCardContent[index + 1].style.backgroundColor = "#3E8847";
+            clientCardText[index + 1].style.color = "white";
+        }
+    });
+});
 
-setInterval(() => {
-    nextClient(clientCards, clientCards.length);
-}, 1500);

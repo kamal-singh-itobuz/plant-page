@@ -32,7 +32,7 @@ $grey-text-color: #727272;
 
 .navbar {
     @include heading-style("navbar", 2.4rem, 700, $grey-text-color);
-
+    background-color: #f4f8f6;
     form {
         position: relative;
         max-width: 15rem;
@@ -173,8 +173,6 @@ $grey-text-color: #727272;
     @include heading-style("plant-collection", 2rem, 600, $dark-green-color);
 
     .plant-collection-images {
-        overflow: hidden;
-
         .plant-collection-card {
             transition: all 0.8s ease;
             height: 28rem;
@@ -454,7 +452,17 @@ $grey-text-color: #727272;
     .client-carousel {
         .client-card {
             transition: all 0.5s ease;
-
+            .client-card-content {
+                box-shadow: 0 0 20px rgb(216, 215, 215);
+                p{
+                    color: $grey-text-color;
+                }
+            }
+            .client-arrow {
+                width: 2rem;
+                top: 0.5rem;
+                right: 0.5rem;
+            }
             >div {
                 border-radius: 1rem;
             }
@@ -467,11 +475,13 @@ $grey-text-color: #727272;
             }
 
             .client-upper-comma {
+                width: 2rem;
                 left: 0rem;
-                top: 2rem;
+                top: 3rem;
             }
 
             .client-bottom-comma {
+                width: 2rem;
                 right: 0rem;
                 bottom: -2rem;
             }
@@ -484,22 +494,24 @@ $grey-text-color: #727272;
         .client-carousel {
             .client-card {
                 width: 75%;
-
+                .client-arrow {
+                    top: 0.6rem;
+                    right: 0.6rem;
+                    width: 2.5rem;
+                }
                 .client-image {
                     height: 6rem;
                     width: 6rem;
-                    margin-left: -6rem;
-                    margin-right: 3rem;
                 }
 
                 .client-upper-comma {
-                    left: 3rem;
-                    top: -4rem;
+                    left: 5rem;
+                    top: -2.5rem;
                 }
 
                 .client-bottom-comma {
                     right: 0rem;
-                    bottom: -3rem;
+                    bottom: -2rem;
                 }
             }
         }
@@ -511,10 +523,18 @@ $grey-text-color: #727272;
         .client-carousel {
             .client-card {
                 width: 60%;
-
+                .client-arrow {
+                    top: 2rem;
+                    right: 2rem;
+                    width: 3rem;
+                }
                 .client-image {
                     height: 6rem;
                     width: 6rem;
+                }
+                .client-upper-comma {
+                    left: 8rem;
+                    top: -1rem;
                 }
             }
         }
