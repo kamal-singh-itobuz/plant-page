@@ -33,6 +33,16 @@
   border-bottom: 0.15rem solid purple;
 }
 
+.hero-section .light-green-shadow {
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  top: 5rem;
+}
+.hero-section .small-leaf-absolute {
+  top: -2rem;
+  height: 5rem;
+}
 .hero-section .hero-content {
   width: 16rem;
 }
@@ -282,10 +292,8 @@
 .ask-anything .ask-anything-form {
   border-radius: 1.5rem 0 0 1.5rem;
   padding: 2rem;
-  height: 90%;
-  margin-top: -50%;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  margin-top: -5%;
+  background-color: #FAF9F7;
 }
 .ask-anything .ask-anything-form .heading-ask-anything {
   color: #09270D;
@@ -300,8 +308,7 @@
   font-size: 1.1rem;
   border: none;
   border-bottom: 1px solid rgba(138, 136, 136, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background-color: #FAF9F7;
 }
 .ask-anything .ask-anything-form .button-ask-anything {
   transition: all 0.5s ease;
@@ -309,6 +316,21 @@
 .ask-anything .ask-anything-form .button-ask-anything:hover {
   background-color: white;
   color: #09270D;
+}
+.ask-anything .ask-anything-form .small-leaf-absolute-one {
+  width: 5rem;
+  bottom: -7rem;
+  right: 0rem;
+}
+.ask-anything .ask-anything-form .small-leaf-absolute-two {
+  width: 5rem;
+  bottom: -13rem;
+  right: 8rem;
+}
+.ask-anything .ask-anything-form .small-leaf-absolute-three {
+  width: 5rem;
+  bottom: -13rem;
+  right: 20rem;
 }
 .ask-anything .button-ask-anything {
   background-color: #09270D;

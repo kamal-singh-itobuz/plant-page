@@ -59,6 +59,16 @@ $grey-text-color: #727272;
 
 // Hero Section
 .hero-section {
+    .light-green-shadow {
+        border-radius: 50%;
+        height: 10rem;
+        width: 10rem;
+        top: 5rem;
+    }
+    .small-leaf-absolute {
+        top: -2rem;
+        height: 5rem;
+    }
     .hero-content {
         width: 16rem;
 
@@ -350,9 +360,8 @@ $grey-text-color: #727272;
     .ask-anything-form {
         border-radius: 1.5rem 0 0 1.5rem;
         padding: 2rem;
-        height: 90%;
-        margin-top: -50%;
-        backdrop-filter: blur(5px);
+        margin-top: -5%;
+        background-color: #FAF9F7;
         @include heading-style("ask-anything", 2rem, 600, $dark-green-color);
 
         input,
@@ -362,7 +371,7 @@ $grey-text-color: #727272;
             font-size: 1.1rem;
             border: none;
             border-bottom: 1px solid rgba(138, 136, 136, 0.3);
-            backdrop-filter: blur(5px);
+            background-color: #FAF9F7;
         }
 
         .button-ask-anything {
@@ -372,6 +381,22 @@ $grey-text-color: #727272;
                 background-color: white;
                 color: $dark-green-color;
             }
+        }
+
+        .small-leaf-absolute-one {
+            width: 5rem;
+            bottom: -7rem;
+            right: 0rem;
+        }
+        .small-leaf-absolute-two {
+            width: 5rem;
+            bottom: -13rem;
+            right: 8rem;
+        }
+        .small-leaf-absolute-three {
+            width: 5rem;
+            bottom: -13rem;
+            right: 20rem;
         }
     }
 
